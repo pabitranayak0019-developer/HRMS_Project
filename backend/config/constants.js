@@ -1,0 +1,88 @@
+const ROLES = {
+  HR_ADMIN: 'HR_ADMIN',
+  MANAGER: 'MANAGER',
+  EMPLOYEE: 'EMPLOYEE',
+};
+
+const LEAVE_TYPES = [
+  'SICK_LEAVE',
+  'CASUAL_LEAVE',
+  'PAID_LEAVE',
+  'UNPAID_LEAVE',
+  'HALF_DAY',
+  'FULL_DAY',
+];
+
+const LEAVE_DURATION = ['FULL_DAY', 'HALF_DAY'];
+
+const LEAVE_STATUS = {
+  PENDING: 'PENDING',
+  APPROVED: 'APPROVED',
+  REJECTED: 'REJECTED',
+  CANCELLED: 'CANCELLED',
+};
+
+const ATTENDANCE_STATUS = {
+  PRESENT: 'PRESENT',
+  ABSENT: 'ABSENT',
+  HALF_DAY: 'HALF_DAY',
+  ON_LEAVE: 'ON_LEAVE',
+  HOLIDAY: 'HOLIDAY',
+};
+
+const EMPLOYMENT_STATUS = ['ACTIVE', 'INACTIVE', 'ON_LEAVE', 'TERMINATED'];
+
+const EXPENSE_STATUS = {
+  PENDING: 'PENDING',
+  APPROVED: 'APPROVED',
+  REJECTED: 'REJECTED',
+};
+
+const EXPENSE_CATEGORIES = [
+  'TRAVEL',
+  'MEALS',
+  'ACCOMMODATION',
+  'FUEL',
+  'OFFICE_SUPPLIES',
+  'TELEPHONE',
+  'CLIENT_ENTERTAINMENT',
+  'OTHER',
+];
+
+const ANNOUNCEMENT_PRIORITY = ['LOW', 'NORMAL', 'HIGH', 'URGENT'];
+
+const PAYSLIP_STATUS = ['GENERATED', 'PAID'];
+
+const PERF_STATUS = ['DRAFT', 'SUBMITTED', 'ACKNOWLEDGED', 'COMPLETED'];
+
+const WORK_HOURS_PER_DAY = Number(process.env.WORK_HOURS_PER_DAY) || 8;
+const WORKING_DAYS_PER_MONTH = Number(process.env.WORKING_DAYS_PER_MONTH) || 22;
+const LATE_THRESHOLD_MINUTES = Number(process.env.LATE_THRESHOLD_MINUTES) || 15;
+
+const COMPANY = {
+  name: process.env.COMPANY_NAME || 'Nexus Corp Ltd',
+  tagline: process.env.COMPANY_TAGLINE || 'Corporate Employee Management Portal',
+  address: process.env.COMPANY_ADDRESS || '12 Corporate Avenue, Business District, New Delhi, India',
+  phone: process.env.COMPANY_PHONE || '+91 11 4567 8900',
+  email: process.env.COMPANY_EMAIL || 'hr@nexuscorp.example',
+  website: process.env.COMPANY_WEBSITE || 'www.nexuscorp.example',
+  regNumber: process.env.COMPANY_REG || 'U72900DL2018PLC123456',
+};
+
+module.exports = {
+  ROLES,
+  LEAVE_TYPES,
+  LEAVE_DURATION,
+  LEAVE_STATUS,
+  ATTENDANCE_STATUS,
+  EMPLOYMENT_STATUS,
+  EXPENSE_STATUS,
+  EXPENSE_CATEGORIES,
+  ANNOUNCEMENT_PRIORITY,
+  PAYSLIP_STATUS,
+  PERF_STATUS,
+  WORK_HOURS_PER_DAY,
+  WORKING_DAYS_PER_MONTH,
+  LATE_THRESHOLD_MINUTES,
+  COMPANY,
+};
